@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hub</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #cdf6e6;
+      padding: 10px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background-image: url("image/logo.png");
+      background-size: cover;
+    }
+
+    .search, .nav {
+      width: 50%;
+      display: flex;
+      align-items: center;
+    }
+
+    .search input {
+      width: 80%;
+      height: 30px;
+      border: 1px solid #cccccc;
+      border-right: none;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .search button {
+      width: 20%;
+      height: 30px;
+      border: none;
+      background-color: #ff9900;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .search button:hover {
+      background-color: #ff6600;
+    }
+
+    .nav {
+      gap: 10px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333333;
+      padding: 5px 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    .nav a:hover {
+      background-color: #cccccc;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: auto;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #cdf6e6;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 5px;
+    }
+
+    .sidebar li a {
+      text-decoration: none;
+      color: #ee0a0a;
+    }
+
+    .sidebar li a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .content h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      margin-bottom: 10px;
+    }
+
+    .content img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .content .product {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .content .product h4 {
+      margin: 0;
+    }
+
+    .content .product span {
+      font-weight: bold;
+      color: #b10000;
+    }
+
+    .content .product button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #17b317;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .content .product button:hover {
+      background-color: #00cc00;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(136, 131, 131);
+      padding: 10px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* Mobile responsiveness */
+    @media only screen and (max-width: 1284px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .search, .nav {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .search input, .search button, .nav a {
+        width: 100%;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo"></div>
+      <div class="search">
+        <input type="text" placeholder="Search for products...">
+        <button>Search</button>
+      </div>
+      <div class="nav">
+        <a href="#">Account</a>
+        <a href="#">Orders</a>
+        <a href="#">Cart</a>
+        <a href="#">Prime</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="sidebar">
+        <h3>Shop by Category</h3>
+        <ul>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Home & Kitchen</a></li>
+          <li><a href="#">Sports & Outdoors</a></li>
+          <li><a href="#">Toys & Games</a></li>
+          <li><a href="#">Beauty & Personal Care</a></li>
+          <li><a href="#">Health & Household</a></li>
+          <li><a href="#">Pet Supplies</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <h2>Featured Products</h2>
+        <div class="product">
+          <img src="image/victo.JPG" alt="Victochand">
+          <div>
+            <h4>Victochand</h4>
+            <p>Special offer Buy 1 & Get Henba for Free.</p>
+            <span>&#8377; 999.99</span>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="image/atao.JPG" alt="Atao">
+          <div>
+            <h4>Atao</h4>
+            <p>Author of the bestselling book "How to be Late for Class".</p>
+            <span>&#8377;19.99</span>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="image/kaleipi.JPG" alt="Kaleipii">
+          <div>
+            <h4>Kaleipii</h4>
+            <p>The last survivor of Vietnam War.</p>
+            <span>&#8377;29.99</span>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="image/kaleipi.JPG" alt="Kaleipii">
+          <div>
+            <h4>Product Name</h4>
+            <p>Product Description</p>
+            <span>$19.99</span>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2023 The Hub. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
